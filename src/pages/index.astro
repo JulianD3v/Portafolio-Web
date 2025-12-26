@@ -5,7 +5,7 @@ import TechGrid from "@/components/TechGrid.astro"
 import AboutMe from "@/components/AboutMe.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
 import CodeIcon from "@/components/icons/Code.astro"
-import VscodeIcon from "@/components/icons/Vscode.astro"
+import VsCodeIcon from "@/components/icons/Vscode.astro"
 import Experience from "@/components/Experience.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 import Projects from "@/components/Projects.astro"
@@ -33,20 +33,20 @@ import TitleSection from "@/components/TitleSection.astro"
       <Experience />
     </SectionContainer>
 
+    <SectionContainer id="tecnologias">
+      <TitleSection>
+        <VsCodeIcon class="size-7" />
+        Tecnologías
+      </TitleSection>
+      <TechGrid />
+    </SectionContainer>
+
     <SectionContainer id="proyectos">
       <TitleSection>
         <CodeIcon class="size-7" />
         Proyectos
       </TitleSection>
       <Projects />
-    </SectionContainer>
-
-    <SectionContainer id="tecnologias">
-      <TitleSection>
-        <VscodeIcon class="size-7" />
-        Tecnologías
-      </TitleSection>
-      <TechGrid />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">

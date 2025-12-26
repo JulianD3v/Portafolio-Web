@@ -7,6 +7,7 @@ import LinkButton from "./LinkButton.astro"
 import Wordpress from "./icons/Wordpress.astro"
 import Docker from "./icons/Docker.astro"
 import Mysql from "./icons/Mysql.astro"
+import AstroIcon from "./icons/Astro.astro"
 
 const TAGS = {
   ANGULAR: {
@@ -34,12 +35,17 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Mysql,
   },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
 }
 const PROJECTS = [
   {
     title: "EasyFace - Reconocimiento Facial",
     description:
-      "Software de Reconocimiento Facial, ampliamente utilizado en la industria para el control de acceso de personal.",
+      "Proyecto en el que colabore el cual es un Software de Reconocimiento Facial, ampliamente utilizado en la industria para el control de acceso del personal.",
     link: "https://easyface.com.co/",
     image: "/projects/easyface.webp",
     tags: [TAGS.LARAVEL, TAGS.ANGULAR, TAGS.MYSQL],
@@ -53,10 +59,10 @@ const PROJECTS = [
     tags: [TAGS.MYSQL, TAGS.WORDPRESS, TAGS.DOCKER],
   },
   {
-    title: "Porfolio Web",
+    title: "Portafolio Web",
     description:
-      "Proyecto personal en el cual estas navegando actualmente, Usando nuevas tecnologias pensando en mi desarrollo profesional",
-    link: "https://julianquintero.vercel.app",
+      "Proyecto personal en el cual estas navegando actualmente, El cual fue desarrollado con Astro para un rendimiento optimo y una experiencia de usuario excepcional.",
+    github: "https://github.com/JulianD3v/Portafolio-Web",
     image: "/projects/julianquintero.webp",
     tags: [TAGS.DOCKER, TAGS.ASTRO],
   },
@@ -68,7 +74,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Julian Quintero" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="eager" src={image} />
     </div>
   </div>
 
@@ -95,14 +101,13 @@ const PROJECTS = [
           {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
-              Code
-              
+              Codigo
             </LinkButton>
           )}
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
-              Preview
+              Proyecto
             </LinkButton>
           )}
         </footer>
